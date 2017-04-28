@@ -114,16 +114,16 @@ public final class Casino extends JavaPlugin implements Listener {
 
                                 WinCategory win = configuration.getWin();
                                 player.sendTitle(
-                                        win.getTitle().replaceAll("%amount%", ""+winAmount),
-                                        win.getSubtitle().replaceAll("%amount%", ""+winAmount),
+                                        c(win.getTitle().replaceAll("%amount%", ""+winAmount)),
+                                        c(win.getSubtitle().replaceAll("%amount%", ""+winAmount)),
                                         win.getFadeIn(),
                                         win.getStay(),
                                         win.getFadeOut());
                             } else {
                                 LoseCategory lose = configuration.getLose();
                                 player.sendTitle(
-                                        lose.getTitle().replaceAll("%amount%", ""+amount),
-                                        lose.getSubtitle().replaceAll("%amount%", ""+amount),
+                                        c(lose.getTitle().replaceAll("%amount%", ""+amount)),
+                                        c(lose.getSubtitle().replaceAll("%amount%", ""+amount)),
                                         lose.getFadeIn(),
                                         lose.getStay(),
                                         lose.getFadeOut());
@@ -131,8 +131,8 @@ public final class Casino extends JavaPlugin implements Listener {
                         } else {
                             WaitCategory wait = configuration.getWait();
                             player.sendTitle(
-                                    wait.getTitle().replaceAll("%seconds%", ""+left),
-                                    wait.getSubtitle().replaceAll("%seconds%", ""+left),
+                                    c(wait.getTitle().replaceAll("%seconds%", ""+left)),
+                                    c(wait.getSubtitle().replaceAll("%seconds%", ""+left)),
                                     wait.getFadeIn(),
                                     wait.getStay(),
                                     wait.getFadeOut());
