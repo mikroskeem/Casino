@@ -8,11 +8,18 @@ description: Casino plugin, rewritten to work without SpigotLib
 
 depend:
 - Vault
+- ProtocolLib
 
 commands:
   casino:
-    permission: casino.use
+    permission: casino.reload
 
 permissions:
   casino.use:
+    default: true
+
+  casino.reload:
+    default: op
+
+  casino.createsign:
     default: op

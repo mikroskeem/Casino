@@ -4,6 +4,9 @@ import lombok.Getter;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author Mark Vainomaa
  */
@@ -11,8 +14,12 @@ import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 @Getter
 public class MessagesCategory {
     @Setting
-    private String enterMoney = "§9Casino: §bEnter the amount of money, which you would like to put in.\n" +
-            "§bType '§ccancel§b' to cancel";
+    private List<String> signLines = Arrays.asList(
+            "",
+            "^^^^^^^^^^^^^^^^",
+            "Enter money amount, what",
+            "you'd like to put in"
+    );
 
     @Setting
     private String cancel = "§9Casino: §cCancelled the money put in request.";
